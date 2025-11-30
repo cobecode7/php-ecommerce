@@ -1,0 +1,154 @@
+<?php
+// Set page title
+$title = 'Shopping Cart';
+ob_start();
+?>
+
+<div class="bg-white">
+    <div class="max-w-2xl mx-auto py-4 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+        <h1 class="text-3xl font-bold tracking-tight text-gray-900 mb-8">Your Shopping Cart</h1>
+
+        <div class="lg:grid lg:grid-cols-12 lg:gap-x-12 xl:gap-x-16">
+            <div class="lg:col-span-8">
+                <div class="bg-white">
+                    <h2 class="sr-only">Items in your shopping cart</h2>
+                    <ul class="divide-y divide-gray-200 border-b border-t border-gray-200">
+                        <!-- Cart item 1 -->
+                        <li class="flex py-6 sm:py-10">
+                            <div class="flex-shrink-0">
+                                <img src="https://placehold.co/200x200" alt="Smartphone X1" class="h-24 w-24 rounded-md object-center object-cover sm:h-32 sm:w-32">
+                            </div>
+
+                            <div class="ml-4 flex flex-1 flex-col justify-between sm:ml-6">
+                                <div class="relative pr-9 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:pr-0">
+                                    <div>
+                                        <div class="flex justify-between">
+                                            <h3 class="text-sm">
+                                                <a href="/product/1" class="font-medium text-gray-700 hover:text-gray-800">
+                                                    Smartphone X1
+                                                </a>
+                                            </h3>
+                                        </div>
+                                        <div class="mt-1 flex text-sm">
+                                            <p class="text-gray-500">Color: Black</p>
+                                        </div>
+                                        <p class="mt-1 text-sm font-medium text-gray-900">$699.99</p>
+                                    </div>
+
+                                    <div class="mt-4 sm:mt-0 sm:pr-9">
+                                        <label for="quantity-1" class="sr-only">Quantity</label>
+                                        <select id="quantity-1" name="quantity-1" class="max-w-full rounded-md border border-gray-300 py-1.5 text-left text-base font-medium focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+
+                                        <div class="absolute top-0 right-0">
+                                            <button type="button" class="inline-flex rounded-md text-gray-400 hover:text-gray-500 focus:outline-none">
+                                                <span class="sr-only">Remove</span>
+                                                <i class="fas fa-times"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- Cart item 2 -->
+                        <li class="flex py-6 sm:py-10">
+                            <div class="flex-shrink-0">
+                                <img src="https://placehold.co/200x200" alt="Cotton T-Shirt" class="h-24 w-24 rounded-md object-center object-cover sm:h-32 sm:w-32">
+                            </div>
+
+                            <div class="ml-4 flex flex-1 flex-col justify-between sm:ml-6">
+                                <div class="relative pr-9 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:pr-0">
+                                    <div>
+                                        <div class="flex justify-between">
+                                            <h3 class="text-sm">
+                                                <a href="/product/3" class="font-medium text-gray-700 hover:text-gray-800">
+                                                    Cotton T-Shirt
+                                                </a>
+                                            </h3>
+                                        </div>
+                                        <div class="mt-1 flex text-sm">
+                                            <p class="text-gray-500">Size: M</p>
+                                        </div>
+                                        <p class="mt-1 text-sm font-medium text-gray-900">$19.99</p>
+                                    </div>
+
+                                    <div class="mt-4 sm:mt-0 sm:pr-9">
+                                        <label for="quantity-2" class="sr-only">Quantity</label>
+                                        <select id="quantity-2" name="quantity-2" class="max-w-full rounded-md border border-gray-300 py-1.5 text-left text-base font-medium focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+
+                                        <div class="absolute top-0 right-0">
+                                            <button type="button" class="inline-flex rounded-md text-gray-400 hover:text-gray-500 focus:outline-none">
+                                                <span class="sr-only">Remove</span>
+                                                <i class="fas fa-times"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Order summary -->
+            <div class="mt-6 border-t border-gray-200 pt-6 lg:col-span-4 lg:mt-0 lg:border-t-0 lg:pt-0">
+                <div class="border-b border-gray-200 pb-6">
+                    <h3 class="text-lg font-medium text-gray-900">Order summary</h3>
+
+                    <div class="mt-6 space-y-4">
+                        <div class="flex items-center justify-between">
+                            <p class="text-base font-medium text-gray-900">Subtotal</p>
+                            <p class="ml-4 text-base font-medium text-gray-900">$719.98</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 flex items-center justify-between">
+                        <dt class="text-base font-medium text-gray-900">Shipping</dt>
+                        <dd class="text-base font-medium text-gray-900">$20.00</dd>
+                    </div>
+                    <div class="mt-4 flex items-center justify-between">
+                        <dt class="text-base font-medium text-gray-900">Taxes</dt>
+                        <dd class="text-base font-medium text-gray-900">$57.60</dd>
+                    </div>
+                    <div class="mt-6 flex items-center justify-between border-t border-gray-200 pt-6">
+                        <dt class="text-base font-medium text-gray-900">Order total</dt>
+                        <dd class="text-base font-medium text-gray-900">$797.58</dd>
+                    </div>
+                </div>
+
+                <div class="mt-10">
+                    <button class="w-full rounded-md border border-transparent bg-indigo-600 px-4 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                        Checkout
+                    </button>
+                </div>
+
+                <div class="mt-6 text-center text-sm text-gray-500">
+                    <p>
+                        or
+                        <a href="/products" class="font-medium text-indigo-600 hover:text-indigo-500">
+                            Continue Shopping
+                            <span aria-hidden="true"> &rarr;</span>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<?php
+$content = ob_get_clean();
+include 'layouts/base.html';
+?>

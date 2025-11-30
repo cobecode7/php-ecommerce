@@ -1,0 +1,24 @@
+{
+  "name": "php-ecommerce",
+  "version": "1.0.0",
+  "description": "A professional e-commerce platform built with PHP 8.4 and MariaDB",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "tailwindcss build ./public/css/src.css -o ./public/css/style.css",
+    "watch-css": "tailwindcss build ./public/css/src.css -o ./public/css/style.css --watch",
+    "dev": "npm run watch-css",
+    "build": "npm run build-css"
+  },
+  "keywords": [
+    "php",
+    "ecommerce",
+    "tailwind",
+    "typescript"
+  ],
+  "author": "PHP E-commerce Team",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5.0.0"
+  }
+}

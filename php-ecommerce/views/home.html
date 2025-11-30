@@ -1,0 +1,150 @@
+<?php
+// Set page title
+$title = 'Home';
+ob_start();
+?>
+
+<!-- Hero section -->
+<div class="bg-gray-200">
+    <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+        <div class="text-center">
+            <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
+                Welcome to <?php echo APP_NAME; ?>
+            </h1>
+            <p class="mt-6 max-w-lg mx-auto text-xl text-gray-500">
+                Discover amazing products at unbeatable prices
+            </p>
+            <div class="mt-10">
+                <a href="/products" class="inline-block bg-indigo-600 border border-transparent rounded-md py-3 px-8 text-base font-medium text-white hover:bg-indigo-700">
+                    Shop Now
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Featured products section -->
+<div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+        <h2 class="text-3xl font-extrabold text-gray-900">Featured Products</h2>
+        <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
+            Handpicked items just for you
+        </p>
+    </div>
+
+    <div class="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+        <!-- Product 1 -->
+        <div class="group relative">
+            <div class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
+                <img src="https://placehold.co/400x400" alt="Placeholder image" class="w-full h-full object-center object-cover lg:w-full lg:h-full">
+            </div>
+            <div class="mt-4 flex justify-between">
+                <div>
+                    <h3 class="text-sm text-gray-700">
+                        <a href="#">
+                            <span aria-hidden="true" class="absolute inset-0"></span>
+                            Smart Wireless Headphones
+                        </a>
+                    </h3>
+                    <p class="mt-1 text-sm text-gray-500">Premium sound quality</p>
+                </div>
+                <p class="text-base font-medium text-gray-900">$129.99</p>
+            </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="group relative">
+            <div class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
+                <img src="https://placehold.co/400x400" alt="Placeholder image" class="w-full h-full object-center object-cover lg:w-full lg:h-full">
+            </div>
+            <div class="mt-4 flex justify-between">
+                <div>
+                    <h3 class="text-sm text-gray-700">
+                        <a href="#">
+                            <span aria-hidden="true" class="absolute inset-0"></span>
+                            Smart Watch Series 5
+                        </a>
+                    </h3>
+                    <p class="mt-1 text-sm text-gray-500">Track your fitness</p>
+                </div>
+                <p class="text-base font-medium text-gray-900">$249.99</p>
+            </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="group relative">
+            <div class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
+                <img src="https://placehold.co/400x400" alt="Placeholder image" class="w-full h-full object-center object-cover lg:w-full lg:h-full">
+            </div>
+            <div class="mt-4 flex justify-between">
+                <div>
+                    <h3 class="text-sm text-gray-700">
+                        <a href="#">
+                            <span aria-hidden="true" class="absolute inset-0"></span>
+                            Portable Bluetooth Speaker
+                        </a>
+                    </h3>
+                    <p class="mt-1 text-sm text-gray-500">360° immersive sound</p>
+                </div>
+                <p class="text-base font-medium text-gray-900">$89.99</p>
+            </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="group relative">
+            <div class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
+                <img src="https://placehold.co/400x400" alt="Placeholder image" class="w-full h-full object-center object-cover lg:w-full lg:h-full">
+            </div>
+            <div class="mt-4 flex justify-between">
+                <div>
+                    <h3 class="text-sm text-gray-700">
+                        <a href="#">
+                            <span aria-hidden="true" class="absolute inset-0"></span>
+                            Wireless Charging Pad
+                        </a>
+                    </h3>
+                    <p class="mt-1 text-sm text-gray-500">Fast charging technology</p>
+                </div>
+                <p class="text-base font-medium text-gray-900">$39.99</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Categories section -->
+<div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl font-extrabold text-gray-900 mb-8">Shop by Category</h2>
+    <div class="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
+        <!-- Category 1 -->
+        <a href="#" class="group">
+            <div class="w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8">
+                <img src="https://placehold.co/600x400" alt="Electronics category" class="w-full h-full object-center object-cover group-hover:opacity-75">
+            </div>
+            <h3 class="mt-4 text-sm text-gray-700">Electronics</h3>
+            <p class="mt-1 text-lg font-medium text-gray-900">Smart devices & accessories</p>
+        </a>
+
+        <!-- Category 2 -->
+        <a href="#" class="group">
+            <div class="w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8">
+                <img src="https://placehold.co/600x400" alt="Clothing category" class="w-full h-full object-center object-cover group-hover:opacity-75">
+            </div>
+            <h3 class="mt-4 text-sm text-gray-700">Clothing</h3>
+            <p class="mt-1 text-lg font-medium text-gray-900">Fashion for every season</p>
+        </a>
+
+        <!-- Category 3 -->
+        <a href="#" class="group">
+            <div class="w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8">
+                <img src="https://placehold.co/600x400" alt="Home & Kitchen category" class="w-full h-full object-center object-cover group-hover:opacity-75">
+            </div>
+            <h3 class="mt-4 text-sm text-gray-700">Home & Kitchen</h3>
+            <p class="mt-1 text-lg font-medium text-gray-900">Make your space comfortable</p>
+        </a>
+    </div>
+</div>
+
+<?php
+$content = ob_get_clean();
+include 'layouts/base.html';
+?>

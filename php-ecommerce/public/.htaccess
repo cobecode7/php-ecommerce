@@ -1,0 +1,25 @@
+# Enable the rewrite engine
+RewriteEngine On
+
+# Set the base path (if the application is not in the root directory)
+RewriteBase /php-ecommerce/
+
+# Redirect all requests to index.php, preserving the path and query parameters
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [QSA,L]
+
+# Security headers
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options nosniff
+    Header always set X-Frame-Options DENY
+    Header always set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+# Prevent access to sensitive files
+<Files "config.php">
+    Require all denied
+</Files>
+<Files "database.php">
+    Require all denied
+</Files>

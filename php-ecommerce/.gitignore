@@ -1,0 +1,48 @@
+# Dependencies
+vendor/
+node_modules/
+
+# Environment specific settings
+.env
+.env.local
+.env.*.local
+.qwen
+
+# User-specific settings
+.vscode/
+.idea/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Compiled files
+public/dist/
+
+# Database
+*.sql
+*.db
+*.db-journal
+
+# Session files
+sessions/
+
+# Backup files
+*.bak
+*.swp
+*~

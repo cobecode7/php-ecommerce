@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?php echo isset($title) ? $title . ' - ' . APP_NAME : APP_NAME; ?></title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>/css/style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+    <!-- Include header -->
+    <?php include __DIR__ . '/../partials/header.html'; ?>
+
+    <main class="container mx-auto px-4 py-8">
+        <?php echo $content ?? ''; ?>
+    </main>
+
+    <!-- Include footer -->
+    <?php include __DIR__ . '/../partials/footer.html'; ?>
+
+    <!-- Scripts -->
+    <script src="<?php echo BASE_URL; ?>/js/app.js"></script>
+    <script>
+        // Handle user menu dropdown
+        document.addEventListener('DOMContentLoaded', function() {
+            const userMenuButton = document.getElementById('user-menu-button');
+            const userMenu = document.getElementById('user-menu');
+
+            if (userMenuButton && userMenu) {
+                userMenuButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    userMenu.classList.toggle('hidden');
+                });
+
+                // Close menu when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!userMenuButton.contains(e.target) && !userMenu.contains(e.target)) {
+                        userMenu.classList.add('hidden');
+                    }
+                });
+            }
+        });
+    </script>
+    <?php if (isset($scripts)) { echo $scripts; } ?>
+</body>
+</html>

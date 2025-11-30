@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+    <div class="min-h-screen flex flex-col">
+        <!-- Include header -->
+        <?php include __DIR__ . '/partials/header.html'; ?>
+
+        <main class="flex-grow flex items-center justify-center px-4 py-12">
+            <div class="text-center">
+                <div class="text-9xl font-bold text-gray-400 mb-4">404</div>
+                <h1 class="text-4xl font-bold text-gray-900 mb-4">Page Not Found</h1>
+                <p class="text-lg text-gray-600 mb-8">
+                    Sorry, we couldn't find the page you're looking for.
+                </p>
+                <a 
+                    href="/" 
+                    class="inline-block bg-indigo-600 border border-transparent rounded-md py-3 px-8 text-base font-medium text-white hover:bg-indigo-700"
+                >
+                    Go back home
+                </a>
+            </div>
+        </main>
+
+        <!-- Include footer -->
+        <?php include __DIR__ . '/partials/footer.html'; ?>
+    </div>
+</body>
+</html>
